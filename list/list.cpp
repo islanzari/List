@@ -11,12 +11,16 @@ void List::add( int value){
     elem->data = value;
     if(last==nullptr){
         elem->next =nullptr;
+         elem->preious=nullptr;
+
         last  = elem;
         first = elem;
     }
     else{
+
         last->next = elem;
-        elem->next=nullptr;
+        elem->preious=last; //w tym momencie last wskazuje
+        elem->next=nullptr; //jeszcze obiekt wczesniej ale dwie linijki nizej juz wskazuje nasz nowy czy wskaźnik previus zmieni swoje polozenie?
         last = elem;
     }
 
@@ -30,7 +34,10 @@ Element* List::findElement(int index){
 
     return temp;
 }
+void List::dalete(Element *elem){
+    delete elem;
 
+}
 
 void List::showElement(Element *elem){
 

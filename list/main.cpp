@@ -8,6 +8,9 @@ int main()
     list.add(5);
     list.add(10);
     list.add(2);
+
+    list.showElement(list.findElement(1));
+   // list.dalete(list.findElement(2));     //dodalem dalete
     list.showElement(list.findElement(2));
     return 0;
 }
